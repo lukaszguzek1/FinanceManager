@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane fx:id="shopBorderPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="552.0" prefWidth="758.0" xmlns="http://javafx.com/javafx/10.0.2-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controllers.ManagerController">
+   <top>
+      <VBox prefHeight="97.0" prefWidth="758.0" BorderPane.alignment="CENTER">
+         <MenuBar>
+           <menus>
+             <Menu mnemonicParsing="false" text="Plik">
+               <items>
+                 <MenuItem mnemonicParsing="false" onAction="#closeApplication" text="Zamknij" />
+               </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Edycja">
+                  <items>
+                     <RadioMenuItem mnemonicParsing="false" onAction="#setModena" text="Modena">
+                        <toggleGroup>
+                           <ToggleGroup fx:id="styleGroup" />
+                        </toggleGroup>
+                     </RadioMenuItem>
+                     <RadioMenuItem mnemonicParsing="false" onAction="#setCaspian" text="Caspian" toggleGroup="$styleGroup" />
+                  </items>
+             </Menu>
+             <Menu mnemonicParsing="false" text="Pomoc">
+               <items>
+                 <MenuItem mnemonicParsing="false" onAction="#about" text="O aplikacji" />
+               </items>
+             </Menu>
+           </menus>
+         </MenuBar>
+          <fx:include fx:id="menuButtons" source="menubuttons.fxml" />
+
+
+
+       </VBox>
+   </top>
+</BorderPane>
